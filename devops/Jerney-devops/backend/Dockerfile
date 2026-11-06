@@ -10,7 +10,7 @@ FROM node:20-alpine AS production
 # Security: run as non-root user
 RUN addgroup -S appgroup && adduser -S appuser -G appgroup
 
-# Security: remove unnecessary packages
+# Security:  packages
 RUN apk --no-cache add dumb-init
 
 WORKDIR /app
